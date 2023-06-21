@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>udělej.to</title>
+  </head>
+  <body>
+    <header>
+      <div class="banner">
+        <h1>přidej.to</h1>
+        <a href="./login.html">přihlas se</a>
+      </div>
+      <nav>
+        <a class="red-text" href="./index.html">sdílené 👨‍👩‍👧</a>
+        <a class="blue-text disabled-link">moje 🙋‍♂️</a>
+      </nav>
+    </header>
+    <main>
+      <form action="/index.html" method="POST">
+        <label for="ukol">úkol</label>
+        <input type="text" id="ukol" name="ukol" required />
+
+        <label for="poznamka">poznámka</label>
+        <textarea id="poznamka" name="poznamka" rows="4"></textarea><br />
+
+        <button type="submit" class="button">přidat úkol</button>
+      </form>
+    </main>
+  </body>
+</html>

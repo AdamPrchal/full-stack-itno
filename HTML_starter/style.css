@@ -1,0 +1,11 @@
+/* === Globální styly === */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}

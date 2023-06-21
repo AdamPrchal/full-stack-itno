@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+udělej.to (moje)
+{% endblock title %}
+
+{% block content %}
+      <a class="button" href="{{url_for('add_personal')}}">přidat úkol</a>
+      <ul class="task-list">
+        {% for task in tasks %}
+          <li class="task-list__item task-list__item--personal {% if task.is_done %}task-list__item--done{% endif %}">
+            <div>
+              <h2 class="task-list__item__title">{{ task.name }}</h2>
+              <p>{{ task.description }}</p>
+            </div>
+            {% if task.is_done %}
+              <span>✅</span>
+            {% else %}
+              <a href="{{ url_for('done_personal', task_id=task.id) }}">🔲</a>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+{% endblock content %}
